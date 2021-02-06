@@ -1,0 +1,81 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cheese
+  namespace: production
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gauda
+  template:
+    metadata:
+      labels:
+        app: gauda
+    spec:
+      containers:
+      - name: gauda
+        image: nginxdemos/hello:plain-text
+        ports:
+        - containerPort: 80
+        envFrom: 
+        - configMapRef:
+            name: game-config
+        volumeMounts:
+        - name: config-volume
+          mountPath: /app/game.properties
+          subPath: game.properties
+      volumes:
+      - name: config-volume
+        configMap:
+          name: game-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gauda-svc
+  namespace: production
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: gauda
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: emek
+  namespace: development  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: emek 
+  template:
+    metadata:
+      labels:
+        app: emek
+    spec:
+      containers:
+      - name: emek
+        image: nginxdemos/hello:plain-text
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: emek-svc
+  namespace: development
+  labels:
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
+  selector:
+    app: emek

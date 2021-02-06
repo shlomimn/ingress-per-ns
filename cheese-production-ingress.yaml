@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: cheese-ingress
+  namespace: production
+spec:
+  tls:
+  - hosts:
+    - cheese.example.com
+    secretName: cheese-secret
+  rules:
+  - host: cheese.example.com
+    http:
+      paths:
+      - path: /gauda
+        backend:
+          serviceName: gauda-svc
+          servicePort: 80

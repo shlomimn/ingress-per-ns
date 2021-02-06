@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: cheese-ingress
+  namespace: development
+spec:
+  tls:
+  - hosts:
+    - cheese.example.com
+    secretName: cheese-secret
+  rules:
+  - host: cheese.example.com
+    http:
+      paths:
+      - path: /emek
+        backend:
+          serviceName: emek-svc
+          servicePort: 80
