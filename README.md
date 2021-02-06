@@ -17,14 +17,18 @@ deployment.apps/cheese   1/1     1            1           5h3m
 NAME                                DESIRED   CURRENT   READY   AGE
 replicaset.apps/cheese-7cbb497586   1         1         1       77m
 
-kubectl get cm -n production
-NAME               DATA   AGE
-game-config        2      116m
-kube-root-ca.crt   1      13h
 
 kubectl get secret -n production
 NAME                  TYPE                                  DATA   AGE
 default-token-mvh6b   kubernetes.io/service-account-token   3      13h
+
+
+* kubectl create configmap game-config --from-file=configs/
+
+kubectl get cm -n production
+NAME               DATA   AGE
+game-config        2      116m
+kube-root-ca.crt   1      13h
 
 ```
 
