@@ -20,6 +20,7 @@ replicaset.apps/cheese-7cbb497586   1         1         1       77m
 
 #### https://cheese.example.com/emek
 <img src="./cheese-dev.jpg" width="500">
+
 ```
 kubectl get all -n development
 NAME                        READY   STATUS    RESTARTS   AGE
