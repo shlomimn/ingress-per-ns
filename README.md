@@ -16,6 +16,11 @@ deployment.apps/cheese   1/1     1            1           5h3m
 
 NAME                                DESIRED   CURRENT   READY   AGE
 replicaset.apps/cheese-7cbb497586   1         1         1       77m
+
+kubectl get cm -n production
+NAME               DATA   AGE
+game-config        2      116m
+kube-root-ca.crt   1      13h
 ```
 
 <img src="./cheese-prod.jpg" width="500">
