@@ -21,6 +21,11 @@ kubectl get cm -n production
 NAME               DATA   AGE
 game-config        2      116m
 kube-root-ca.crt   1      13h
+
+kubectl get secret -n production
+NAME                  TYPE                                  DATA   AGE
+default-token-mvh6b   kubernetes.io/service-account-token   3      13h
+
 ```
 
 <img src="./cheese-prod.jpg" width="500">
