@@ -1,0 +1,79 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  data:
+    game.properties: |-
+      enemies=aliens
+      lives=3
+      enemies.cheat=true
+      enemies.cheat.level=noGoodRotten
+      secret.code.passphrase=UUDDLRLRBABAS
+      secret.code.allowed=true
+      secret.code.lives=30
+    ui.properties: |
+      color.good=purple
+      color.bad=yellow
+      allow.textmode=true
+      how.nice.to.look=fairlyNice
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2021-02-06T17:20:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:game.properties: {}
+          f:ui.properties: {}
+      manager: kubectl-create
+      operation: Update
+      time: "2021-02-06T17:20:25Z"
+    name: game-config
+    namespace: production
+    resourceVersion: "87920"
+    uid: 3cbc4431-1709-478f-8a54-ef30a46680a8
+- apiVersion: v1
+  data:
+    ca.crt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDBjCCAe6gAwIBAgIBATANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwptaW5p
+      a3ViZUNBMB4XDTIxMDIwNDA4MjkwOVoXDTMxMDIwMzA4MjkwOVowFTETMBEGA1UE
+      AxMKbWluaWt1YmVDQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ3n
+      hVHYfNm7beMw5V6mwihJrCv47xAs9cmyNU+6LGqUgUyq9phSeA5GmqFPqtWmTc3Y
+      kO+tPN5P9exXMzDpU7t7W3N4bg7/LC8MQ3usYT+A+bF44qeQHjbEUvhwmfMXhf1b
+      UN72/HdJdqmPJscpUWOgmUNtpNaFJQpotfaDroVV840yD8YzHO2aLA3Gs4Oootkf
+      X6Z9MHJp7U/yO3fUH4p15UZ8cwYbrbjCzJJaXVt1hA6jhJAm5cauilMvTkUNixkm
+      XluN74Uw3fbtFiNBON5f3T9u1Kryz8kUC4ZxHuVpsdLzKaepfluNWelSE/cgcw8z
+      FsdvZzR7rK6QKrl4yY0CAwEAAaNhMF8wDgYDVR0PAQH/BAQDAgKkMB0GA1UdJQQW
+      MBQGCCsGAQUFBwMCBggrBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQW
+      BBSg4j73WUn89NdR3B4BSdjDnGD1RDANBgkqhkiG9w0BAQsFAAOCAQEAjE+yTZeM
+      QoBxOKhiNy9UVkn/WME4HKJf3PURk2jeFhxz7gDL5eZPRQlFB7xfgbMN3kKgNdWy
+      7gPgQO9rWLTjxHVicFNMbsWzB+/wnHHxRmydqzAPeFcZVstByw9hperEg1rpPqFo
+      zCF6g9XtlueIZdYFQ8XUUP/F8tMKsOnOSamcycko3BCzDZQPGonHoO0F7VrsjAsQ
+      Vukx1+2r1TP818+f5AdSAq152KZ8ucsTDLEeTisNfPq/YSkOknJPrWQj65tZGdQH
+      hfU/dM4h9iWKgXdya+8BvwUrTc/FvqM+6c38/8sxVFsgjQFXkXR7E8lRI9mFl+PU
+      qL2olPklhH7Eiw==
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2021-02-06T06:04:13Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:ca.crt: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2021-02-06T06:04:13Z"
+    name: kube-root-ca.crt
+    namespace: production
+    resourceVersion: "55043"
+    uid: 2af8ee19-d65d-4154-83f1-fe2b80c6b901
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
+
