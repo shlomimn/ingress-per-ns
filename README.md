@@ -1,6 +1,6 @@
 ## ingress-per-ns
 
-## https://cheese.example.com/gauda
+#### https://cheese.example.com/gauda
 <img src="./cheese-prod.jpg" width="500">
 
 ```
@@ -18,7 +18,7 @@ NAME                                DESIRED   CURRENT   READY   AGE
 replicaset.apps/cheese-7cbb497586   1         1         1       77m
 ```
 
-## https://cheese.example.com/emek
+#### https://cheese.example.com/emek
 <img src="./cheese-dev.jpg" width="500">
 ```
 kubectl get all -n development
