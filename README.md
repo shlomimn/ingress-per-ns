@@ -1,8 +1,8 @@
-# ingress-per-ns
+## ingress-per-ns
 
-# https://cheese.example.com/gauda
+### https://cheese.example.com/gauda
 
-'''
+```
 kubectl get all -n production
 NAME                          READY   STATUS    RESTARTS   AGE
 pod/cheese-7cbb497586-g585f   1/1     Running   0          56m
@@ -15,10 +15,10 @@ deployment.apps/cheese   1/1     1            1           5h3m
 
 NAME                                DESIRED   CURRENT   READY   AGE
 replicaset.apps/cheese-7cbb497586   1         1         1       77m
-'''
+```
 
-# https://cheese.example.com/emek
-'''
+### https://cheese.example.com/emek
+```
 kubectl get all -n development
 NAME                        READY   STATUS    RESTARTS   AGE
 pod/emek-86f5668ddd-5r4cd   1/1     Running   0          5h3m
@@ -31,4 +31,4 @@ deployment.apps/emek   1/1     1            1           5h3m
 
 NAME                              DESIRED   CURRENT   READY   AGE
 replicaset.apps/emek-86f5668ddd   1         1         1       5h3m
-'''
+```
