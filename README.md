@@ -1,5 +1,6 @@
 ## ingress-per-ns
 
+production = gauda
 #### https://cheese.example.com/gauda
 
 ```
@@ -20,6 +21,7 @@ replicaset.apps/cheese-7cbb497586   1         1         1       77m
 <img src="./cheese-prod.jpg" width="500">
 
 
+development=emek
 #### https://cheese.example.com/emek
 
 ```
